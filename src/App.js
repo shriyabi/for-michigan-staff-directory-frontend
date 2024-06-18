@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchingData = async() => {
       try{
-        const response = await axios.get('/api/search', {
+        const response = await axios.get('/search', {
           params: {
             first: 'Shriya',
             last: 'Biddala'
