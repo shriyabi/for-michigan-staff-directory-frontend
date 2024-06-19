@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/for-michigan-staff-directory-frontend/static/css/main.a69a12d7.css",
+    "main.js": "/for-michigan-staff-directory-frontend/static/js/main.8a5c2df3.js",
+    "static/js/453.8ab44547.chunk.js": "/for-michigan-staff-directory-frontend/static/js/453.8ab44547.chunk.js",
+    "static/media/4MichBlack.png": "/for-michigan-staff-directory-frontend/static/media/4MichBlack.b35dd86d350dd00a475a.png",
+    "index.html": "/for-michigan-staff-directory-frontend/index.html",
+    "main.a69a12d7.css.map": "/for-michigan-staff-directory-frontend/static/css/main.a69a12d7.css.map",
+    "main.8a5c2df3.js.map": "/for-michigan-staff-directory-frontend/static/js/main.8a5c2df3.js.map",
+    "453.8ab44547.chunk.js.map": "/for-michigan-staff-directory-frontend/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a69a12d7.css",
+    "static/js/main.8a5c2df3.js"
+  ]
+}
