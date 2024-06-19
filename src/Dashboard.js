@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosinstance from './client'; 
 import logo from './4MichBlack.png';
+import './SignIn.css'; 
 
 function Dashboard() {
   const [firstName, setFirstName] = useState('');
@@ -108,7 +109,7 @@ function Dashboard() {
         <h1 className="text-center text-5xl font-extrabold  text-maple-dark dark:text-beige"> Welcome </h1>
         </div>
         <div className="w-full flex flex-row mb-20 items-center justify-center h-full">
-      <div className='bg-beige-dark dark:bg-maple-light rounded w-1/4 h-2/5 mx-2 flex flex-col justify-center items-center '>
+      <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-1/4 h-2/5 mx-4 flex flex-col justify-center items-center '>
       <h3 className="dark:text-slate-900 text-center text-semibold mb-12 text-xl">Enter Employee's First and Last Name</h3>
         <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center">
           <div className="flex-col flex items-center mb-7">
@@ -135,7 +136,7 @@ function Dashboard() {
           </button>
         </form>
       </div>
-      <div className='bg-beige-dark dark:bg-maple-light rounded w-1/4 mx-2 h-2/5 flex flex-col justify-center items-center'>
+      <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-1/4 mx-4 h-2/5 flex flex-col justify-center items-center'>
       <h3 className="dark:text-slate-900 text-semibold mb-12 text-xl">Enter Region </h3>
         <form onSubmit={handleSubmit2} className="flex flex-col justify-center items-center">
           <div className="flex-row mb-7">
@@ -155,7 +156,7 @@ function Dashboard() {
           </button>
         </form>
       </div>
-      <div className='bg-beige-dark dark:bg-maple-light rounded w-1/4 mx-2 h-2/5 flex flex-col justify-center items-center'>
+      <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-1/4 mx-4 h-2/5 flex flex-col justify-center items-center'>
       <h3 className="dark:text-slate-900 mb-12 text-semibold text-xl">Enter Job Title </h3>
         <form onSubmit={handleSubmit3} className="flex flex-col justify-center items-center">
           <div className="flex-row mb-7">

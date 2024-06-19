@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import logo from './4MichBlack.png';
 import React, {useEffect} from 'react';
+import './SignIn.css';
 
 function SignIn() {
     const navigate = useNavigate(); 
@@ -22,8 +23,8 @@ function SignIn() {
   }
   return (
     <div className='bg-beige-light dark:bg-maple-dark h-screen w-screen flex items-center justify-center'>
-      <div className='bg-beige-dark dark:bg-maple h-2/3 w-2/5 flex items-center justify-center'>
-        <div className='w-3/5 py-12 h-3/5 bg-beige dark:bg-maple-light flex-col justify-center items-center'>
+      <div className='bg-beige-dark dark:bg-maple h-2/3 w-2/5 flex items-center rounded justify-center shadow-box dark:shadow-box-light'>
+        <div className='w-3/5 py-12 h-3/5 bg-beige dark:bg-maple-light flex-col rounded justify-center items-center'>
           <div className='h-1/3 w-full flex items-center justify-center'>
             <img
               src={logo}

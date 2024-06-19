@@ -1,0 +1,15 @@
+.shadow-box{
+    box-shadow: 0 0 2em gray;
+}
+
+.shadow-box-light{
+    box-shadow: 0 0 2em rgb(233, 232, 229);
+}
+
+.shadow-sm-box{
+    box-shadow: 0 0 1em gray;
+}
+
+.shadow-sm-box-light{
+    box-shadow: 0 0 1em rgb(233, 232, 229);
+}
