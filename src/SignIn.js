@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import logo from './4MichBlack.png';
 import React, {useEffect} from 'react';
 
 function SignIn() {
+    const navigate = useNavigate(); 
   useEffect(() => {
     window.google.accounts.id.initialize({
       client_id: '794592945955-l8bl1vel00cbo9g4j0pj24fentervtop.apps.googleusercontent.com',
@@ -13,10 +15,11 @@ function SignIn() {
     );
   }, []);
 
+  //success so navigate to dashbaord
   const handleCredentialResponse = (response) => {
     console.log("Encoded JWT ID token: " + response.credential);
+    navigate('/dashboard')
   }
-
   return (
     <div className='bg-beige-light dark:bg-maple-dark h-screen w-screen flex items-center justify-center'>
       <div className='bg-beige-dark dark:bg-maple h-2/3 w-2/5 flex items-center justify-center'>
