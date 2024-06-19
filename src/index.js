@@ -5,14 +5,18 @@ import './index.css';
 import App from './App';
 import StaffProfile from './StaffProfile';
 import Dashboard from './Dashboard';
+import RegionProfile from './RegionProfile';
+import JobTitleProfile from './JobTitleProfile';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Router>
+  <Router basename="/for-michigan-staff-directory-frontend">
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/staff-information" element={<StaffProfile />} />
+      <Route path="/region-information" element={<RegionProfile />} />
+      <Route path="/roles-information" element={<JobTitleProfile />} />
       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   </Router>
