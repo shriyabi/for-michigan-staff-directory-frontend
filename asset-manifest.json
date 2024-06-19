@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/for-michigan-staff-directory-frontend/static/css/main.bd724a6a.css",
-    "main.js": "/for-michigan-staff-directory-frontend/static/js/main.d2715036.js",
+    "main.css": "/for-michigan-staff-directory-frontend/static/css/main.d1672c95.css",
+    "main.js": "/for-michigan-staff-directory-frontend/static/js/main.572b27cc.js",
     "static/js/453.8ab44547.chunk.js": "/for-michigan-staff-directory-frontend/static/js/453.8ab44547.chunk.js",
     "static/media/4MichBlack.png": "/for-michigan-staff-directory-frontend/static/media/4MichBlack.b35dd86d350dd00a475a.png",
     "index.html": "/for-michigan-staff-directory-frontend/index.html",
-    "main.bd724a6a.css.map": "/for-michigan-staff-directory-frontend/static/css/main.bd724a6a.css.map",
-    "main.d2715036.js.map": "/for-michigan-staff-directory-frontend/static/js/main.d2715036.js.map",
+    "main.d1672c95.css.map": "/for-michigan-staff-directory-frontend/static/css/main.d1672c95.css.map",
+    "main.572b27cc.js.map": "/for-michigan-staff-directory-frontend/static/js/main.572b27cc.js.map",
     "453.8ab44547.chunk.js.map": "/for-michigan-staff-directory-frontend/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd724a6a.css",
-    "static/js/main.d2715036.js"
+    "static/css/main.d1672c95.css",
+    "static/js/main.572b27cc.js"
   ]
 }
