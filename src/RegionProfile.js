@@ -16,6 +16,9 @@ const RegionProfile = () => {
         navigate('/dashboard');
     };
 
+    console.log(data);
+    const parsedData = JSON.parse(data);
+
     return (
         <div className='bg-beige-light dark:bg-maple-dark min-h-screen  w-screen flex flex-col overflow-wrap-normal'>
             <h1 className="text-5xl font-extrabold text-maple-dark dark:text-amber-100 text-left ml-10 pt-12">
@@ -23,27 +26,27 @@ const RegionProfile = () => {
             </h1>
             <div>
                 <div className="mx-10 mt-12 flex w-[90vw] overflow-wrap-normal items-center justify-start">
-                    <ul className="flex-col flex px-5">
-                        {data.map((item) => (
-                            <li key={item.ID}>
+                    <ul className="flex-col flex">
+                        {parsedData.map((val, index) => (
+                            <li key={val.ID}>
                                 <div className="flex flex-col pb-5">
-                                    <h1 className="text-xl overline font-bold dark:text-beige">
-                                        {item['First Name']} {item['Last Name']}
+                                    <h1 className="text-xl overline font-bold text-maple dark:text-beige">
+                                        {val.name}
                                     </h1>
-                                    <div className="flex flex-row items-center dark:text-maple-light">
-                                        <p className="text-lg font-semibold"> {item.Region}, </p>
-                                        <p className="text-base italic px-2 font-semibold"> {item['Job Title']}</p>
+                                    <div className="flex flex-row items-center text-beige-dark dark:text-maple-light">
+                                        <p className="text-lg font-semibold"> {val.region}, </p>
+                                        <p className="text-base italic px-2 font-semibold"> {val.job_title}</p>
                                     </div>
-                                    <p className="dark:text-stone-300"> {item['Phone Number']}</p>
+                                    <p className="dark:text-stone-300"> {val.phone_number}</p>
                                     <div className="flex flex-row items-center">
-                                        <p className="text-base dark:text-stone-300"> {item['Personal Email']} </p>
+                                        <p className="text-base dark:text-stone-300"> {val.personal_email} </p>
                                         <p className="text-sm italic px-2 dark:text-stone-300"> (Personal) </p>
-                                        <p className="text-base dark:text-stone-300"> | {item['4Mich Email']} </p>
+                                        <p className="text-base dark:text-stone-300"> | {val.for_mich_email} </p>
                                         <p className="text-sm italic px-2 dark:text-stone-300"> (4Mich) </p>
-                                        <p className="text-base dark:text-stone-300"> | {item['School Email']} </p>
+                                        <p className="text-base dark:text-stone-300"> | {val.school_email} </p>
                                         <p className="text-sm italic px-2 dark:text-stone-300"> (School) </p>
                                     </div>
-                                    <p className="dark:text-stone-300"> {item['Address']}</p>
+                                    <p className="dark:text-stone-300"> {val.job_title} </p>
                                 </div>
                             </li>
                         ))}
