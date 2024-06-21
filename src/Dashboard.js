@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axiosinstance from './client'; 
 import logo from './4MichBlack.png';
 import './SignIn.css'; 
-import { staffProfile } from '../../backend/sql.js'; 
+import { staffProfile } from './sql.js'; 
 
 function Dashboard() {
   const [firstName, setFirstName] = useState('');
