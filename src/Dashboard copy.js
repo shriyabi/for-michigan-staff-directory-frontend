@@ -3,9 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axiosinstance from './client'; 
 import logo from './4MichBlack.png';
 import './SignIn.css'; 
-import { staffProfile } from '../../backend/sql.js'; 
 
-function Dashboard() {
+function DashboardCopy() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [givenRegion, setGivenRegion] = useState(''); 
@@ -15,22 +14,29 @@ function Dashboard() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const data = staffProfile(firstName,lastName); // Assuming response.data is the array of staff profiles
+      const response = await axiosinstance.get('/api/search', {
+        params: {
+          first: firstName,
+          last: lastName,
+        },
+      });
+      const data = response.data; // Assuming response.data is the array of staff profiles
       navigate('/staff-information', { state: { data } }); // Navigate to '/staffprofile' with data as state
       console.log("success");  
     } catch (error) {
-      console.log(error); 
-      if (error.code) {
-        if (error.code === 404) {
-            setErrors('Staff not found. Please check the first and last name.');
-        } else if (error.code === 500) {
-            setErrors('Internal server error. Please try again later.');
+      if (error.response) {
+        if (error.response.status === 404) {
+          setErrors('Staff not found. Please check the first and last name.');
+        } else if (error.response.status === 500) {
+          setErrors('Internal server error. Please try again later.');
         } else {
-            setErrors('An error occurred. Contact Shriya for support.');
+          setErrors('An error occurred. Contact Shriya for support.');
         }
-    } else {
+      } else if (error.request) {
+        setErrors('Network error. Please check your internet connection.');
+      } else {
         setErrors('Error fetching data. Please try again later.');
-    }
+      }
     }
   };
   const handleSubmit2 = async (e) => {
@@ -177,4 +183,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default DashboardCopy;
