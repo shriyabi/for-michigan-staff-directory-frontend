@@ -116,8 +116,8 @@ function Dashboard() {
         />
         <h1 className="text-center text-5xl font-extrabold  text-maple-dark dark:text-beige mb-10"> Welcome </h1>
       </div>
-      <div className="w-full flex flex-col lg:flex-row md:mb-40 lg:mb-20 items-center justify-center h-full">
-        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-3/4 mt-5 h-[25vh] px-2 py-4 md:w-1/2 md:mb-5 lg:w-1/4 md:h-3/4 mx-4 flex flex-col justify-center items-center '>
+      <div className="w-full flex flex-col mb-10 mt-10 lg:flex-row md:mb-40 lg:mb-20 items-center justify-center h-[25vh]">
+        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-3/4 mt-5 h-full px-2 py-4 md:w-1/2 md:mb-5 lg:w-1/4 mx-4 flex flex-col justify-center items-center '>
           <h3 className="dark:text-slate-900 text-center text-semibold mb-3 text-base md:mb-7 text-xl lg:mb-12">Enter Employee's First and Last Name</h3>
           <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center">
             <div className="flex-col flex items-center mb-2 md:mb-7">
@@ -144,7 +144,7 @@ function Dashboard() {
             </button>
           </form>
         </div>
-        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light py-4 rounded w-3/4 mt-5 h-[25vh] px-2 md:w-1/2 md:mb-5 lg:w-1/4 md:h-3/4 mx-4 flex flex-col justify-center items-center '>
+        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light py-4 rounded w-3/4 mt-5 h-full px-2 md:w-1/2 md:mb-5 lg:w-1/4 mx-4 flex flex-col justify-center items-center '>
           <h3 className="dark:text-slate-900 text-semibold mb-5 md:mb-12 text-base md:mb-7 text-xl lg:mb-12">Enter Region </h3>
           <form onSubmit={handleSubmit2} className="flex flex-col justify-center items-center">
             <div className="flex-col flex items-center justify-center items-center mb-3">
@@ -194,7 +194,7 @@ function Dashboard() {
             )} */}
           </form>
         </div>
-        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light py-4 rounded w-3/4 mt-5 h-[25vh] px-2 md:w-1/2 md:h-3/4 lg:w-1/4 mx-4 flex flex-col justify-center items-center '>
+        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light py-4 rounded w-3/4 mt-5 h-full px-2 md:w-1/2 md:mb-5 lg:w-1/4 mx-4 flex flex-col justify-center items-center '>
           <h3 className="dark:text-slate-900 mb-5 md:mb-12 text-semibold text-base md:mb-7 text-xl lg:mb-12">Enter Job Title </h3>
           <form onSubmit={handleSubmit3} className="flex flex-col justify-center items-center">
           <div className="flex-col flex items-center justify-center mb-3 md:mb-3">
