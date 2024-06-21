@@ -99,78 +99,78 @@ function Dashboard() {
   };
 
   return (
-    <div className='bg-beige-light dark:bg-maple-dark h-screen w-screen flex flex-col items-center justify-center'>
+    <div className='bg-beige-light dark:bg-maple-dark md:h-screen w-screen flex flex-col items-center justify-center'>
         <div className="flex flex-col justify-center items-center">
         <img
               src={logo}
-              className='w-1/5 mt-10'
+              className='w-1/3 md:w-1/4 mt-20 lg:w-1/5 mt-10'
               alt="Logo"
             />
         <h1 className="text-center text-5xl font-extrabold  text-maple-dark dark:text-beige"> Welcome </h1>
         </div>
-        <div className="w-full flex flex-row mb-20 items-center justify-center h-full">
-      <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-1/4 h-2/5 mx-4 flex flex-col justify-center items-center '>
-      <h3 className="dark:text-slate-900 text-center text-semibold mb-12 text-xl">Enter Employee's First and Last Name</h3>
+        <div className="w-full flex flex-col md:flex-row md:mb-40 lg:mb-20 items-center justify-center h-full">
+      <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-3/4 mt-5 h-[25vh] px-2 md:w-[27vw] lg:w-1/4 h-2/5 mx-4 flex flex-col justify-center items-center '>
+      <h3 className="dark:text-slate-900 text-center text-semibold mb-3 text-base md:mb-7 text-xl lg:mb-12">Enter Employee's First and Last Name</h3>
         <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center">
-          <div className="flex-col flex items-center mb-7">
+          <div className="flex-col flex items-center mb-2 md:mb-7">
             <input
               type="text"
               placeholder='First Name'
-              className='mx-2 px-1 mb-2 w-full text-lg border-2 border-slate-700 rounded border-lg focus:border-blue-300 invalid:border-red-300 dark:bg-gray-300'
+              className='px-1 mb-1 text-sm md:text-lg mx-2 mb-2 w-full border-2 border-slate-700 rounded border-lg focus:border-blue-300 invalid:border-red-300 dark:bg-gray-300'
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
             <input
               type="text"
               placeholder='Last Name'
-              className='mx-2 px-1 border-2 w-full text-lg border-slate-700 rounded border-lg focus:border-blue-300 invalid:border-red-300 dark:bg-gray-300'
+              className='px-1 mb-1 text-sm md:text-lg mx-2 mb-2 w-full border-2 border-slate-700 rounded border-lg focus:border-blue-300 invalid:border-red-300 dark:bg-gray-300'
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
             />
           </div>
           <button
             type="submit"
-            className="bg-beige dark:bg-maple rounded-lg px-2 py-1 hover:bg-beige-light dark:hover:bg-maple-dark"
+            className="bg-beige dark:bg-maple text-sm md:text-base rounded-lg px-2 py-1 hover:bg-beige-light dark:hover:bg-maple-dark"
           >
             Search
           </button>
         </form>
       </div>
-      <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-1/4 mx-4 h-2/5 flex flex-col justify-center items-center'>
-      <h3 className="dark:text-slate-900 text-semibold mb-12 text-xl">Enter Region </h3>
+      <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-3/4 mt-5 h-[25vh] px-2 md:w-[27vw] lg:w-1/4 h-2/5 mx-4 flex flex-col justify-center items-center '>
+      <h3 className="dark:text-slate-900 text-semibold mb-5 md:mb-12 text-base md:mb-7 text-xl lg:mb-12">Enter Region </h3>
         <form onSubmit={handleSubmit2} className="flex flex-col justify-center items-center">
-          <div className="flex-row mb-7">
+          <div className="flex-row mb-3 md:mb-7">
             <input
               type="text"
               placeholder='Region'
-              className='mx-2 px-1 text-lg border-2 border-slate-700 rounded border-lg focus:border-blue-300 invalid:border-red-300 dark:bg-gray-300'
+              className='px-1 mb-1 text-sm md:text-lg mx-2 mb-2 lg:w-full border-2 border-slate-700 rounded border-lg focus:border-blue-300 invalid:border-red-300 dark:bg-gray-300'
               value={givenRegion}
               onChange={(e) => setGivenRegion(e.target.value)}
             />
           </div>
           <button
             type="submit"
-            className="bg-beige dark:bg-maple rounded-lg px-2 py-1 hover:bg-beige-light dark:hover:bg-maple-dark"
+            className="bg-beige dark:bg-maple text-sm md:text-base rounded-lg px-2 py-1 hover:bg-beige-light dark:hover:bg-maple-dark"
           >
             Search
           </button>
         </form>
       </div>
-      <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-1/4 mx-4 h-2/5 flex flex-col justify-center items-center'>
-      <h3 className="dark:text-slate-900 mb-12 text-semibold text-xl">Enter Job Title </h3>
+      <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-3/4 mt-5 h-[25vh] px-2 md:w-[27vw] lg:w-1/4 h-2/5 mx-4 flex flex-col justify-center items-center '>
+      <h3 className="dark:text-slate-900 mb-5 md:mb-12 text-semibold text-base md:mb-7 text-xl lg:mb-12">Enter Job Title </h3>
         <form onSubmit={handleSubmit3} className="flex flex-col justify-center items-center">
-          <div className="flex-row mb-7">
+          <div className="flex-row mb-3 md:mb-7">
             <input
               type="text"
               placeholder='Job Title'
-              className='mx-2 px-1 text-lg border-2 border-slate-700 rounded border-lg focus:border-blue-300 invalid:border-red-300 dark:bg-gray-300'
+              className='px-1 mb-1 text-sm md:text-lg mx-2 mb-2 lg:w-full border-2 border-slate-700 rounded border-lg focus:border-blue-300 invalid:border-red-300 dark:bg-gray-300'
               value={givenTitle}
               onChange={(e) => setGivenTitle(e.target.value)}
             />
           </div>
           <button
             type="submit"
-            className="bg-beige dark:bg-maple rounded-lg px-2 py-1 hover:bg-beige-light dark:hover:bg-maple-dark"
+            className="bg-beige dark:bg-maple text-sm md:text-base rounded-lg px-2 py-1 hover:bg-beige-light dark:hover:bg-maple-dark"
           >
             Search
           </button>
