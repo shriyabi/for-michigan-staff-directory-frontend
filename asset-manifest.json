@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/for-michigan-staff-directory-frontend/static/css/main.d0fece7c.css",
-    "main.js": "/for-michigan-staff-directory-frontend/static/js/main.51216bc5.js",
+    "main.js": "/for-michigan-staff-directory-frontend/static/js/main.f9bdb98b.js",
     "static/js/845.116b9008.chunk.js": "/for-michigan-staff-directory-frontend/static/js/845.116b9008.chunk.js",
     "static/media/4MichBlack.png": "/for-michigan-staff-directory-frontend/static/media/4MichBlack.b35dd86d350dd00a475a.png",
     "index.html": "/for-michigan-staff-directory-frontend/index.html",
     "main.d0fece7c.css.map": "/for-michigan-staff-directory-frontend/static/css/main.d0fece7c.css.map",
-    "main.51216bc5.js.map": "/for-michigan-staff-directory-frontend/static/js/main.51216bc5.js.map",
+    "main.f9bdb98b.js.map": "/for-michigan-staff-directory-frontend/static/js/main.f9bdb98b.js.map",
     "845.116b9008.chunk.js.map": "/for-michigan-staff-directory-frontend/static/js/845.116b9008.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d0fece7c.css",
-    "static/js/main.51216bc5.js"
+    "static/js/main.f9bdb98b.js"
   ]
 }
