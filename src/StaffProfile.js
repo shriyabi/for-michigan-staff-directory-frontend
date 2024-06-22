@@ -22,10 +22,10 @@ const StaffProfile = () => {
   console.log("Name" + parsedData[0].name);
   return (
     <div className='bg-beige-light dark:bg-maple-dark h-screen overflow-hidden overflow-x-hidden w-screen flex flex-col justify-center'>
-        <h1 className="text-3xl md:text-5xl font-extrabold text-maple-dark dark:text-amber-100 text-left ml-5 md:ml-10 md:pt-12">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-maple-dark dark:text-amber-100 text-left ml-5 md:ml-10 md:pt-12 lg:ml-12">
           { parsedData[0].name}
         </h1>
-      <div className="ml-5 md:ml-10 mr-5 mt-12 flex flex-col md:flex-row w-full">
+      <div className="ml-5 md:ml-10 mr-5 mt-12 flex flex-col md:flex-row w-full lg:ml-12">
         <div className="w-screen md:w-1/2">
           <h1 className="text-lg md:text-2xl overline font-bold text-maple dark:text-beige text-left"> Contact Information </h1>
           <div className="flex-col flex text-left text-stone-400">
@@ -59,7 +59,7 @@ const StaffProfile = () => {
                 </h1>
             </div>
             <br></br>
-            <div className="text-sm text-stone-400 dark:text-beige-dark md:text-lg font-semibold mb-5"> Address </div>
+            <div className="text-sm text-stone-400 dark:text-beige-dark md:text-lg font-semibold mb-1"> Address </div>
               <h1 className="text-base md:text-xl text-maple-dark dark:text-amber-100 font-bold text-left"  >
               { parsedData[0].staff_address }
               </h1>

@@ -42,8 +42,8 @@ function SignIn() {
     }
     return (
         <div className='bg-beige-light dark:bg-maple-dark h-screen w-screen flex items-center justify-center'>
-            <div className='bg-beige-dark dark:bg-maple w-3/4 h-1/2 md:w-3/5 md:h-2/5 lg:h-2/3 w-2/5 flex items-center rounded justify-center shadow-box dark:shadow-box-light'>
-                <div className='bg-beige dark:bg-maple-light flex flex-col rounded justify-center items-center w-3/5 h-3/4 py-12 md:w-3/4 h-3/4 lg:w-3/5 h-3/5'>
+            <div className='bg-beige-dark dark:bg-maple w-3/4 h-1/2 md:w-3/5 md:h-2/5 lg:h-1/2 lg:w-2/5 flex items-center rounded justify-center shadow-box dark:shadow-box-light'>
+                <div className='bg-beige dark:bg-maple-light flex flex-col rounded justify-center items-center w-3/5 h-3/4 py-12 md:w-3/4 h-3/4 lg:w-3/4 h-3/4'>
                     <div className='h-1/3 w-full flex items-center justify-center'>
                         <img
                             src={logo}
