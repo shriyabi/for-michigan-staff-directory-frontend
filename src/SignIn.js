@@ -47,7 +47,7 @@ function SignIn() {
                     <div className='h-1/3 w-full flex items-center justify-center'>
                         <img
                             src={logo}
-                            className='w-1/2 h-auto lg:w-1/3'
+                            className='w-1/2 h-auto md:w-1/3'
                             alt="Logo"
                         />
                     </div>

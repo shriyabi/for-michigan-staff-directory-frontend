@@ -107,11 +107,11 @@ function Dashboard() {
   }, []);
 
   return (
-    <div className='bg-beige-light dark:bg-maple-dark min-h-screen w-screen overflow-y-scroll flex flex-col items-center justify-center'>
+    <div className='bg-beige-light dark:bg-maple-dark min-h-screen w-screen overflow-y-scroll flex flex-col items-center lg:justify-center'>
       <div className="flex flex-col justify-center items-center">
         <img
           src={logo}
-          className='w-1/3 md:w-1/4 lg:w-1/5 lg:mb-10'
+          className='mt-10 w-1/3 md:w-1/4 lg:w-1/5 lg:mb-10'
           alt="Logo"
         />
         <h1 className="text-center text-5xl font-extrabold text-maple-dark dark:text-beige mb-40 md:mb-60 lg:mb-20"> Welcome </h1>
@@ -138,7 +138,7 @@ function Dashboard() {
             </div>
             <button
               type="submit"
-              className="bg-beige dark:bg-maple text-sm md:text-base rounded-lg px-2 py-1 hover:bg-beige-light dark:hover:bg-maple-dark"
+              className="bg-beige dark:bg-maple text-sm mb-1 md:mb-0 md:text-base rounded-lg px-2 py-1 hover:bg-beige-light dark:hover:bg-maple-dark"
             >
               Search
             </button>
@@ -194,7 +194,7 @@ function Dashboard() {
             )} */}
           </form>
         </div>
-        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light py-4 rounded w-3/4 mt-5 h-full px-2 md:w-1/2 md:mb-5 lg:w-1/4 mx-4 flex flex-col justify-center items-center '>
+        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light py-4 rounded w-3/4 mt-5 h-full px-2 md:w-1/2 md:mb-5 lg:w-1/4 mx-4 flex flex-col justify-center items-center mt-10'>
           <h3 className="dark:text-slate-900 mb-5 md:mb-12 text-semibold text-base md:mb-7 text-xl lg:mb-12">Enter Job Title </h3>
           <form onSubmit={handleSubmit3} className="flex flex-col justify-center items-center">
           <div className="flex-col flex items-center justify-center mb-3 md:mb-3">
@@ -244,7 +244,7 @@ function Dashboard() {
         </div>
       </div>
 
-      {errors && <div className="ttext-red-800 dark:text-red-200 pb-10 text-center"> <p className="text-xl">{errors}</p></div>}
+      {errors && <div className="text-sm md:text-base text-red-600 dark:text-red-200 font-bold top-0 absolute text-center"> <p className="text-xl">{errors}</p></div>}
     </div>
   );
 }

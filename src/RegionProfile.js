@@ -20,43 +20,51 @@ const RegionProfile = () => {
     const parsedData = JSON.parse(data);
 
     return (
-        <div className='bg-beige-light dark:bg-maple-dark min-h-screen  w-screen flex flex-col overflow-wrap-normal'>
-            <h1 className="text-5xl font-extrabold text-maple-dark dark:text-amber-100 text-left ml-10 pt-12">
-                {region}
+        <div className='bg-beige-light dark:bg-maple-dark min-h-screen w-screen flex flex-col overflow-y-scroll overflow-wrap-normal'>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-maple-dark dark:text-amber-100 text-left ml-5 md:ml-10 mt-5 lg:ml-12">
+                { region }
             </h1>
             <div>
-                <div className="mx-10 mt-12 flex w-[90vw] overflow-wrap-normal items-center justify-start">
+                <div className="ml-5 md:ml-10 mt-5 md:mt-10 lg:ml-12 mt-12 flex w-[90vw] overflow-wrap-normal items-center justify-start">
                     <ul className="flex-col flex">
                         {parsedData.map((val, index) => (
                             <li key={val.ID}>
                                 <div className="flex flex-col pb-5">
-                                    <h1 className="text-xl overline font-bold text-maple dark:text-beige">
+                                    <h1 className="text-lg md:text-xl overline font-bold text-maple dark:text-beige">
                                         {val.name}
                                     </h1>
-                                    <div className="flex flex-row items-center text-beige-dark dark:text-maple-light">
-                                        <p className="text-lg font-semibold"> {val.region}, </p>
-                                        <p className="text-base italic px-2 font-semibold"> {val.job_title}</p>
+                                    <div className="flex flex-col md:flex-row md:items-center text-beige-dark dark:text-maple-light">
+                                        <p className="text-base md:text-lg font-semibold"> {val.region}, </p>
+                                        <p className="text-sm md:text-base italic md:px-2 font-semibold"> {val.job_title}</p>
                                     </div>
-                                    <p className="dark:text-stone-300"> {val.phone_number}</p>
-                                    <div className="flex flex-row items-center">
-                                        <p className="text-base dark:text-stone-300"> {val.personal_email} </p>
-                                        <p className="text-sm italic px-2 dark:text-stone-300"> (Personal) </p>
-                                        <p className="text-base dark:text-stone-300"> | {val.for_mich_email} </p>
-                                        <p className="text-sm italic px-2 dark:text-stone-300"> (4Mich) </p>
-                                        <p className="text-base dark:text-stone-300"> | {val.school_email} </p>
-                                        <p className="text-sm italic px-2 dark:text-stone-300"> (School) </p>
+                                    <p className="text-sm md:text-base dark:text-stone-300"> {val.phone_number}</p>
+                                    <div className="flex flex-col md:flex-row items-left md:items-center">
+                                        <div className="flex flex-row">
+                                        <p className="text-sm md:text-base dark:text-stone-300"> {val.personal_email} </p>
+                                        <p className="text-xs md:text-sm italic pt-1 px-2 dark:text-stone-300"> (Personal) </p>
+                                        <p className="text-sm md:text-base font-bold px-2 text-beige-light dark:text-maple-dark md:text-maple-dark md:dark:text-beige-light"> | </p>
+                                        </div>
+                                        <div className="flex flex-row">
+                                        <p className="text-sm md:text-base dark:text-stone-300"> {val.for_mich_email} </p>
+                                        <p className="text-xs md:text-sm italic pt-1 px-2 dark:text-stone-300"> (4Mich) </p>
+                                        <p className="text-sm md:text-base font-bold px-2 text-beige-light dark:text-maple-dark md:text-maple-dark md:dark:text-beige-light"> | </p>
+                                        </div>
+                                        <div className="flex flex-row">
+                                        <p className="text-sm md:text-base dark:text-stone-300"> {val.school_email} </p>
+                                        <p className="text-xs md:text-sm italic pt-1 px-2 dark:text-stone-300"> (School) </p>
+                                        <p className="text-sm md:text-base font-bold px-2 text-beige-light dark:text-maple-dark md:text-maple-dark md:dark:text-beige-light"> | </p>
+                                        </div>
                                     </div>
-                                    <p className="dark:text-stone-300"> {val.job_title} </p>
+                                    <p className="text-sm md:text-base dark:text-stone-300"> {val.staff_address} </p>
                                 </div>
                             </li>
                         ))}
                     </ul>
                 </div>
             </div>
-
-            <div className="w-full flex justify-center mt-10 pt-10">
+            <div className="w-full flex justify-center">
                 <button
-                    className="bottom-0 border w-1/5 bg-maple text-beige-light dark:text-maple-dark rounded hover:bg-beige hover:text-maple-dark dark:bg-beige dark:hover:bg-amber-100 dark:hover:text-maple-dark"
+                    className="bottom-0 mt-10 mb-5 px-2 border w-1/2 md:w-1/3 lg:w-1/5 bg-maple text-beige-light dark:text-maple-dark rounded hover:bg-beige hover:text-maple-dark dark:bg-beige dark:hover:bg-amber-100 dark:hover:text-maple-dark"
                     onClick={handleSubmit}>
                     Return Back to Search </button>
             </div>

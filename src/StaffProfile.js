@@ -22,10 +22,10 @@ const StaffProfile = () => {
   console.log("Name" + parsedData[0].name);
   return (
     <div className='bg-beige-light dark:bg-maple-dark h-screen overflow-hidden overflow-x-hidden w-screen flex flex-col justify-center'>
-        <h1 className="text-3xl md:text-5xl font-extrabold text-maple-dark dark:text-amber-100 text-left ml-5 md:ml-10 md:pt-12 lg:ml-12">
-          { parsedData[0].name}
-        </h1>
-      <div className="ml-5 md:ml-10 mr-5 mt-12 flex flex-col md:flex-row w-full lg:ml-12">
+       <h1 className="text-3xl md:text-5xl font-extrabold text-maple-dark dark:text-amber-100 text-left ml-5 md:ml-10 mt-5 lg:ml-12">
+                { parsedData[0].name }
+            </h1>
+      <div className="ml-5 md:ml-10 mr-5 mt-7 md:mt-12 flex flex-col md:flex-row w-full lg:ml-12">
         <div className="w-screen md:w-1/2">
           <h1 className="text-lg md:text-2xl overline font-bold text-maple dark:text-beige text-left"> Contact Information </h1>
           <div className="flex-col flex text-left text-stone-400">
@@ -65,7 +65,7 @@ const StaffProfile = () => {
               </h1>
           </div>
         </div>
-        <div className="w-screen md:w-1/2">
+        <div className="w-screen mt-12 md:w-1/2 md:pl-5 md:mt-0">
           <h1 className="text-lg md:text-2xl overline font-bold text-maple dark:text-beige text-left"> Job Information </h1>
           <div className="flex-row text-left text-slate-800">
             <div className="flex-row flex items-center">
@@ -85,12 +85,12 @@ const StaffProfile = () => {
             <div className="flex-row flex items-center">
               <div className="text-sm text-stone-400 md:text-lg dark:text-beige-dark font-semibold"> Region:  </div>
               
-                <h1 className={`text-base md:text-xl text-maple-dark font-bold text-left mx-2 px-2
-                ${ parsedData[0].region === 'Region 1 - Lansing' ? 'bg-red-200' : 'bg-gray-300'}
+                <h1 className={`text-base md:text-xl text-maple-dark font-bold text-left mx-2 px-1
+                ${ parsedData[0].region === 'Region 1 - Lansing' ? 'bg-red-300' : 'bg-gray-300'}
                 ${ parsedData[0].region === 'Region 2 - Northern' ? 'bg-yellow-200' : 'bg-gray-300'}
-                ${ parsedData[0].region === 'Region 3 - Detriot' ? 'bg-purple-200' : 'bg-gray-300'}
-                ${ parsedData[0].region === 'Region 4 - Ann Arbor' ? 'bg-orange-200' : 'bg-gray-300'}
-                ${ parsedData[0].region === 'Region 5 - Western' ? 'bg-blue-200' : 'bg-gray-300'}
+                ${ parsedData[0].region === 'Region 3 - Detroit' ? 'bg-purple-300' : 'bg-gray-300'}
+                ${ parsedData[0].region === 'Region 4 - Ann Arbor' ? 'bg-orange-300' : 'bg-gray-300'}
+                ${ parsedData[0].region === 'Region 5 - Western' ? 'bg-blue-300' : 'bg-gray-300'}
               `}>
                   { parsedData[0].region}
                 </h1>
@@ -98,11 +98,11 @@ const StaffProfile = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-center mt-20 pt-20">
-        <button
-          className="bottom-0 border w-1/2 md:w-1/5 bg-maple text-beige-light rounded hover:bg-beige hover:text-maple-dark dark:bg-beige dark:text-maple-dark dark:hover:bg-amber-100 dark:hover:text-maple-dark"
-          onClick={handleSubmit}>
-          Return Back to Search </button>
+      <div className="w-full flex justify-center md:mt-20 pt-20">
+      <button
+                    className="bottom-0 mt-10 mb-5 px-2 border w-1/2 md:w-1/3 lg:w-1/5 bg-maple text-beige-light dark:text-maple-dark rounded hover:bg-beige hover:text-maple-dark dark:bg-beige dark:hover:bg-amber-100 dark:hover:text-maple-dark"
+                    onClick={handleSubmit}>
+                    Return Back to Search </button>
       </div>
     </div>
   )
