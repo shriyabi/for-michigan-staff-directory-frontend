@@ -22,7 +22,7 @@ function SignIn() {
 
     useEffect(() => {
         window.google.accounts.id.initialize({
-            client_id: '794592945955-l8bl1vel00cbo9g4j0pj24fentervtop.apps.googleusercontent.com',
+            client_id: 'MY CLIENT ID',
             callback: handleCredentialResponse
         });
         renderGoogleButton();
