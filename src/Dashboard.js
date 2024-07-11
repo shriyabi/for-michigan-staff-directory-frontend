@@ -5,12 +5,14 @@ import './SignIn.css';
 import { staffProfile } from './sql.js';
 import { regionProfile } from './sql.js';
 import { jobProfile } from './sql.js';
+import { schoolProfile } from './sql.js'; 
 
 function Dashboard() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [givenRegion, setGivenRegion] = useState('');
   const [givenTitle, setGivenTitle] = useState('');
+  const [givenSchool, setGivenSchool] = useState('');
   const [errors, setErrors] = useState('');
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
@@ -74,6 +76,26 @@ function Dashboard() {
       }
     }
   };
+  const handleSubmit4 = async (e) => {
+    e.preventDefault();
+    try {
+      const data = schoolProfile(givenSchool); // Assuming response.data is the array of staff profiles
+      const school = givenSchool;
+      navigate('/school-information', { state: { data, school } }); // Navigate to '/regionprofile' with data as state
+      console.log("success");
+    } catch (error) {
+      console.log(error);
+      if (error.code) {
+        if (error.code === 404) {
+          setErrors('School not found. Please verify the school name.');
+        } else {
+          setErrors('An error occurred. Contact Shriya for support.');
+        }
+      } else {
+        setErrors('Error fetching data. Please try again later.');
+      }
+    }
+  };
 
   //dropdown
   const [isOpen, setIsOpen] = useState(false);
@@ -116,7 +138,7 @@ function Dashboard() {
         <h1 className="text-center text-5xl font-extrabold text-maple-dark dark:text-beige mb-40 md:mb-60 lg:mb-20"> Welcome </h1>
       </div>
       <div className="w-full flex flex-col mb-10 mt-10 md:mb-20 lg:flex-row lg:mb-60 items-center justify-center h-[25vh]">
-        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-3/4 mt-5 h-full px-2 py-4 md:w-1/2 md:mb-5 lg:w-1/4 mx-4 flex flex-col justify-center items-center '>
+        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light rounded w-3/4 mt-5 h-full px-2 py-4 md:w-1/2 md:mb-5 lg:w-1/5 mx-4 flex flex-col justify-center items-center '>
           <h3 className="dark:text-slate-900 text-center font-semibold mb-3 text-base md:mb-7 text-xl lg:mb-12">Enter Employee's First and Last Name</h3>
           <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center">
             <div className="flex-col flex items-center mb-2 md:mb-7">
@@ -143,7 +165,7 @@ function Dashboard() {
             </button>
           </form>
         </div>
-        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light py-4 rounded w-3/4 mt-5 h-full px-2 md:w-1/2 md:mb-5 lg:w-1/4 mx-4 flex flex-col justify-center items-center '>
+        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light py-4 rounded w-3/4 mt-5 h-full px-2 md:w-1/2 md:mb-5 lg:w-1/5 mx-4 flex flex-col justify-center items-center '>
           <h3 className="dark:text-slate-900 font-semibold mb-5 md:mb-12 text-base md:mb-7 text-xl lg:mb-12">Enter Region </h3>
           <form onSubmit={handleSubmit2} className="flex flex-col justify-center items-center">
             <div className="flex-col flex items-center justify-center items-center mb-3">
@@ -167,33 +189,10 @@ function Dashboard() {
               >
                 Search
               </button>
-              {/*{isOpen && (
-                <div className=" w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
-                  <div className="py-1">
-                    {options.map((option, index) => (
-                      <button
-                        key={index}
-                        onClick={() => handleOptionClick(option)}
-                        className="w-full flex flex-col text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                      >
-                        {option}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}*/}
             </div>
-            {/*{!isOpen && (  //show the submit button only if dropdown is not open
-              <button
-                type="submit"
-                className="bg-beige dark:bg-maple text-sm md:text-base rounded-lg px-2 py-1 hover:bg-beige-light dark:hover:bg-maple-dark mt-2"
-              >
-                Search
-              </button>
-            )} */}
           </form>
         </div>
-        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light py-4 rounded w-3/4 mt-5 h-full px-2 md:w-1/2 md:mb-5 lg:w-1/4 mx-4 flex flex-col justify-center items-center mt-10'>
+        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light py-4 rounded w-3/4 mt-5 h-full px-2 md:w-1/2 md:mb-5 lg:w-1/5 mx-4 flex flex-col justify-center items-center mt-10'>
           <h3 className="dark:text-slate-900 mb-5 md:mb-12 font-semibold text-base md:mb-7 text-xl lg:mb-12">Enter Job Title </h3>
           <form onSubmit={handleSubmit3} className="flex flex-col justify-center items-center">
           <div className="flex-col flex items-center justify-center mb-3 md:mb-3">
@@ -239,6 +238,56 @@ function Dashboard() {
                 Search
               </button>
             )}*/}
+          </form>
+        </div>
+        <div className='bg-beige-dark shadow-sm-box dark:bg-maple-light dark:shadow-sm-box-light py-4 rounded w-3/4 mt-5 h-full px-2 md:w-1/2 md:mb-5 lg:w-1/5 mx-4 flex flex-col justify-center items-center '>
+          <h3 className="dark:text-slate-900 font-semibold mb-5 md:mb-12 text-base md:mb-7 text-xl lg:mb-12">Enter School </h3>
+          <form onSubmit={handleSubmit4} className="flex flex-col justify-center items-center">
+            <div className="flex-col flex items-center justify-center items-center mb-3">
+              <select
+                type="dropdown"
+                name="School"
+                className="px-1 py-1 mb-1 text-sm md:text-lg mx-2 mb-2 w-full border-2 border-slate-700 rounded border-lg focus:border-blue-300 invalid:border-red-300 dark:bg-gray-300"
+                value={givenSchool}
+                onChange={(e) => setGivenSchool(e.target.value)}>
+                  <option value="Select Region" className='px-1 mb-1 italic text-sm md:text-lg mx-2 mb-2 w-full border-2 border-slate-700 rounded border-lg focus:border-blue-300 invalid:border-red-300 dark:bg-gray-300'> Select School </option>
+                  <option value="Michigan State University">Michigan State University</option>
+                  <option value="Lansing Community College">Lansing Community College</option>
+                  <option value="Jackson College"> Jackson College</option>
+                  <option value="Albion College"> Albion College </option>
+                  <option value="University of Michigan - Ann Arbor"> University of Michigan - Ann Arbor</option>
+                  <option value="Washtenaw Community College"> Washtenaw Community College</option>
+                  <option value="Eastern Michigan University">Eastern Michigan University</option>
+                  <option value="Monroe County Community College">Monroe County Community College</option>
+                  <option value="Saginaw Valley State University">Saginaw Valley State University</option>
+                  <option value="Delta College">Delta College</option>
+                  <option value="Central Michigan University">Central Michigan University</option>
+                  <option value="Alma College">Alma College</option>
+                  <option value="Mid-Michigan College">Mid-Michigan College</option>
+                  <option value="University of Michigan - Flint">University of Michigan - Flint</option>
+                  <option value="Kettering College">Kettering College</option>
+                  <option value="Mott Community College">Mott Community College</option>
+                  <option value="Wayne State University">Wayne State University</option>
+                  <option value="University of Detroit Mercy">University of Detroit Mercy</option>
+                  <option value="Oakland University">Oakland University</option>
+                  <option value="Oakland Community College">Oakland Community College</option>
+                  <option value="Macomb Community College">Macomb Community College</option>
+                  <option value="Lawrence Technological University">Lawrence Technological University</option>
+                  <option value="Ferris State University">Ferris State University</option>
+                  <option value="Western Michigan University">Western Michigan University</option>
+                  <option value="Kalamazoo College">Kalamazoo College</option>
+                  <option value="Kalamazoo Valley Community College">Kalamazoo Valley Community College</option>
+                  <option value="Grand Valley State University">Grand Valley State University</option>
+                  <option value="Grand Rapids Community College">Grand Rapids Community College</option>
+                  <option value="Aquinas College">Aquinas College</option>
+                </select>
+                <button
+                type="submit"
+                className="bg-beige dark:bg-maple text-sm md:text-base rounded-lg px-2 py-1 hover:bg-beige-light dark:hover:bg-maple-dark mt-2"
+              >
+                Search
+              </button>
+            </div>
           </form>
         </div>
       </div>

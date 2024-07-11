@@ -3,12 +3,12 @@ import { useLocation } from 'react-router-dom'; //retrieving data from app
 import { useNavigate } from 'react-router-dom';
 
 //function StaffProfile({data}){
-const JobTitleProfile = () => {
+const SchoolProfile = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const { data = [], job = '' } = location.state || {};
+    const { data = [], school = '' } = location.state || {};
     console.log('Data:', data); // Check if data is correctly passed
-    console.log('Data:', job);
+    console.log('Data:', school);
     if (!data || data.length === 0) {
         return <div>No data available</div>;
     }
@@ -21,7 +21,7 @@ const JobTitleProfile = () => {
     return (
         <div className='bg-beige-light dark:bg-maple-dark min-h-screen w-screen flex flex-col overflow-y-scroll overflow-wrap-normal'>
             <h1 className="text-3xl md:text-5xl font-extrabold text-maple-dark dark:text-amber-100 text-left mx-5 md:mx-10 mt-5 lg:mx-12">
-                { job }
+                { school }
             </h1>
             <div>
                 <div className="ml-5 md:ml-10 mt-5 md:mt-10 lg:ml-12 mt-12 flex w-[90vw] overflow-wrap-normal items-center justify-start">
@@ -70,4 +70,4 @@ const JobTitleProfile = () => {
         </div>
     )
 }
-export default JobTitleProfile; 
+export default SchoolProfile; 

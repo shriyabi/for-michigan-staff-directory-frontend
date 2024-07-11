@@ -21,7 +21,7 @@ const RegionProfile = () => {
 
     return (
         <div className='bg-beige-light dark:bg-maple-dark min-h-screen w-screen flex flex-col overflow-y-scroll overflow-wrap-normal'>
-            <h1 className="text-3xl md:text-5xl font-extrabold text-maple-dark dark:text-amber-100 text-left ml-5 md:ml-10 mt-5 lg:ml-12">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-maple-dark dark:text-amber-100 text-left mx-5 md:mx-10 mt-5 lg:mx-12">
                 { region }
             </h1>
             <div>
@@ -37,6 +37,7 @@ const RegionProfile = () => {
                                         <p className="text-base md:text-lg font-semibold"> {val.region}, </p>
                                         <p className="text-sm md:text-base italic md:px-2 font-semibold"> {val.job_title}</p>
                                     </div>
+                                    <p className="text-sm md:text-base dark:text-stone-300"> {val.school}</p>
                                     <p className="text-sm md:text-base dark:text-stone-300"> {val.phone_number}</p>
                                     <div className="flex flex-col md:flex-row items-left md:items-center">
                                         <div className="flex flex-row">
@@ -52,7 +53,6 @@ const RegionProfile = () => {
                                         <div className="flex flex-row">
                                         <p className="text-sm md:text-base dark:text-stone-300"> {val.school_email} </p>
                                         <p className="text-xs md:text-sm italic pt-1 px-2 dark:text-stone-300"> (School) </p>
-                                        <p className="text-sm md:text-base font-bold px-2 text-beige-light dark:text-maple-dark md:text-maple-dark md:dark:text-beige-light"> | </p>
                                         </div>
                                     </div>
                                     <p className="text-sm md:text-base dark:text-stone-300"> {val.staff_address} </p>

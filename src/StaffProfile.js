@@ -76,6 +76,13 @@ const StaffProfile = () => {
                 </h1>
             </div>
             <div className="flex-row flex items-center">
+              <div className="text-sm md:text-lg text-stone-400 dark:text-beige-dark  font-semibold"> School:  </div>
+              
+                <h1 className="text-base md:text-xl text-maple-dark font-bold text-left dark:text-amber-100  px-2"  >
+                { parsedData[0].school}
+                </h1>
+            </div>
+            <div className="flex-row flex items-center">
               <div className="text-sm text-stone-400 md:text-lg dark:text-beige-dark  font-semibold"> Date Joined:  </div>
               
                 <h1 className="text-base md:text-xl text-maple-dark font-bold text-left dark:text-amber-100  px-2"  >
