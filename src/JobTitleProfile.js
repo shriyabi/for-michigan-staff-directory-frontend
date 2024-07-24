@@ -16,7 +16,9 @@ const JobTitleProfile = () => {
         navigate('/dashboard');
     };
 
-    const parsedData = JSON.parse(data);
+    const parsedData = JSON.parse(data).sort((a,b) => {
+        return parseInt(a.ID) - parseInt(b.ID);
+      }); //local compare w str
 
     return (
         <div className='bg-beige-light dark:bg-maple-dark min-h-screen w-screen flex flex-col overflow-y-scroll overflow-wrap-normal'>
